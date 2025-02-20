@@ -25,39 +25,36 @@
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:backgroundTint="#0DFFFFFF"
-            android:gravity="bottom"
+            android:gravity="bottom|center"
             android:orientation="horizontal"
             tools:ignore="UselessParent">
 
             <ImageButton
                 android:id="@+id/olympiads"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_weight="1"
                 android:backgroundTint="#00FFFFFF"
                 android:onClick="onOlympClick"
-                android:src="@drawable/ic_launcher_foreground"
-                android:tint="#000000" />
+                android:src="@drawable/olymp_black" />
 
             <ImageButton
                 android:id="@+id/events"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_weight="1"
                 android:backgroundTint="#00FFFFFF"
                 android:onClick="onEventClick"
-                android:src="@drawable/ic_launcher_foreground"
-                android:tint="#000000" />
+                android:src="@drawable/event_black" />
 
             <ImageButton
                 android:id="@+id/associations"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_weight="1"
                 android:backgroundTint="#00FFFFFF"
                 android:onClick="onAssocClick"
-                android:src="@drawable/ic_launcher_foreground"
-                android:tint="#000000" />
+                android:src="@drawable/assoc_black" />
         </LinearLayout>
 
     </LinearLayout>

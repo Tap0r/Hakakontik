@@ -1,5 +1,6 @@
 package com.example.hakakontik
 
+import android.animation.ObjectAnimator
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
@@ -22,14 +23,14 @@ class MainActivity : FragmentActivity() {
                 super.onPageSelected(position)
                 when(position){
                     0 -> findViewById<ImageButton>(R.id.olympiads)
-                    1 -> findViewById<ImageButton>(R.id.olympiads)
-                    2 -> findViewById<ImageButton>(R.id.olympiads)
+                    1 -> findViewById<ImageButton>(R.id.events)
+                    2 -> findViewById<ImageButton>(R.id.associations)
                 }
             }
         })
     }
 
-    fun onOlympClick(view: View?) { viewPager.currentItem = 0 }
-    fun onEventClick(view: View?) { viewPager.currentItem = 1 }
-    fun onAssocClick(view: View?) { viewPager.currentItem = 2 }
+    fun onOlympClick(view: View?) { viewPager.currentItem = 0; if (view != null) Anim.scale(view) }
+    fun onEventClick(view: View?) { viewPager.currentItem = 1; if (view != null) Anim.scale(view) }
+    fun onAssocClick(view: View?) { viewPager.currentItem = 2; if (view != null) Anim.scale(view) }
 }
