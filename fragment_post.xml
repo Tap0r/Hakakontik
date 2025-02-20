@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Создание"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/comfortaa_bold"
+        android:textColor="#260763"
+        android:textSize="22sp"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Введите название"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/comfortaa_bold"
+
+                    >
+
+                </EditText>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Введите краткое описание"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/comfortaa_bold"
+                    >
+
+                </EditText>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Введите полное описание"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/comfortaa_bold"
+
+                    >
+
+                </EditText>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Введите ссылку на олимпиаду"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/comfortaa_bold"
+                    >
+
+                </EditText>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Введите дату "
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:textColor="@color/black"
+                    >
+
+                </TextView>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19"
+                    android:fontFamily="@font/comfortaa_bold"
+                    >
+
+                </EditText>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="06"
+                    android:fontFamily="@font/comfortaa_bold"
+                    >
+
+                </EditText>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24"
+
+                    >
+
+                </EditText>
+            </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Создать новость"
+                android:fontFamily="@font/comfortaa_bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/button_stroke"
+                android:padding="5dp"
+                >
+
+            </Button>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
