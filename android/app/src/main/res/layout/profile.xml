@@ -4,7 +4,6 @@
     android:layout_height="match_parent">
 
     <ScrollView
-        android:id="@+id/olympiads_scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
@@ -18,16 +17,10 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ОЛИМПИАДЫ"
+                android:text="ПРОФИЛЬ"
                 android:textAlignment="center"
                 android:textAppearance="@android:style/TextAppearance.Material.Large"
                 android:textSize="34sp" />
-
-            <Button
-                android:id="@+id/fragmentnaebalo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="фрагмент на ебало" />
         </LinearLayout>
     </ScrollView>
 

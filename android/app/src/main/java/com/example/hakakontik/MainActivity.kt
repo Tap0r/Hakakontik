@@ -9,7 +9,6 @@ import com.example.hakakontik.fragments.ViewPagerAdapter
 
 
 class MainActivity : FragmentActivity() {
-    // viewPager для смены фрагментов на экране
     private val viewPager: ViewPager2 by lazy { findViewById(R.id.viewpager) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,13 +16,11 @@ class MainActivity : FragmentActivity() {
         setContentView(R.layout.main)
 
         viewPager.adapter = ViewPagerAdapter(this)
-        // обработка смены фрагмента (красит кнопки)
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             private var oldPos = 0
             private val buttons: Array<ImageButton> by lazy {
-                arrayOf(findViewById(R.id.olympiads), findViewById(R.id.events), findViewById(R.id.associations))
+                arrayOf(findViewById(R.id.olympiads), findViewById(R.id.events), findViewById(R.id.associations), findViewById(R.id.profile))
             }
-
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 Anim.unActive(buttons[oldPos])
@@ -31,12 +28,10 @@ class MainActivity : FragmentActivity() {
                 oldPos = position
             }
         })
-
-
     }
 
-    // жмём кнопку и viewPager меняет фрагмент; кнопка реагирует на нажатие увеличением размера
     fun onOlympClick(view: View) { viewPager.currentItem = 0; Anim.scale(view) }
     fun onEventClick(view: View) { viewPager.currentItem = 1; Anim.scale(view) }
     fun onAssocClick(view: View) { viewPager.currentItem = 2; Anim.scale(view) }
+    fun onProfileClick(view: View) { viewPager.currentItem = 3; Anim.scale(view) }
 }

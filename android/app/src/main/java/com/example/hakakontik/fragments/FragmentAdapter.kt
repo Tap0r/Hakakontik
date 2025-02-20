@@ -6,13 +6,14 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 
 class ViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
 
-    override fun getItemCount(): Int { return 3 }
+    override fun getItemCount(): Int { return 4 }
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
             0 -> OlympFragment()
             1 -> EventFragment()
             2 -> AssocFragment()
+            3 -> ProfileFragment()
             else -> throw IllegalArgumentException("Invalid position")
         }
     }
