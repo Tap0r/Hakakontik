@@ -4,6 +4,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
 import androidx.fragment.app.FragmentActivity
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.hakakontik.fragments.ViewPagerAdapter
 

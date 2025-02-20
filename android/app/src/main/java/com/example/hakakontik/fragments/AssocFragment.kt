@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import com.example.hakakontik.R
 
 
-class AssocFragment: Fragment() {
+class AssocFragment(): Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.associations, container, false)
     }

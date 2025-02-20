@@ -52,6 +52,8 @@ dependencies {
     implementation(libs.androidx.compose.testing)
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.viewpager2)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
