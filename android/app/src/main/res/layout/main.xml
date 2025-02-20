@@ -24,7 +24,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:backgroundTint="#0DFFFFFF"
             android:gravity="bottom|center"
             android:orientation="horizontal"
             tools:ignore="UselessParent">
@@ -36,7 +35,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#00FFFFFF"
                 android:onClick="onOlympClick"
-                android:src="@drawable/olymp_black" />
+                android:src="@drawable/olympiads" />
 
             <ImageButton
                 android:id="@+id/events"
@@ -45,7 +44,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#00FFFFFF"
                 android:onClick="onEventClick"
-                android:src="@drawable/event_black" />
+                android:src="@drawable/events" />
 
             <ImageButton
                 android:id="@+id/associations"
@@ -54,7 +53,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#00FFFFFF"
                 android:onClick="onAssocClick"
-                android:src="@drawable/assoc_black" />
+                android:src="@drawable/associations" />
         </LinearLayout>
 
     </LinearLayout>

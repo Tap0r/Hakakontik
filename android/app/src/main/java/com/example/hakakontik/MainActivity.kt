@@ -1,6 +1,5 @@
 package com.example.hakakontik
 
-import android.animation.ObjectAnimator
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
@@ -10,6 +9,7 @@ import com.example.hakakontik.fragments.ViewPagerAdapter
 
 
 class MainActivity : FragmentActivity() {
+    // viewPager для смены фрагментов на экране
     private val viewPager: ViewPager2 by lazy { findViewById(R.id.viewpager) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,20 +17,26 @@ class MainActivity : FragmentActivity() {
         setContentView(R.layout.main)
 
         viewPager.adapter = ViewPagerAdapter(this)
-
+        // обработка смены фрагмента (красит кнопки)
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            private var oldPos = 0
+            private val buttons: Array<ImageButton> by lazy {
+                arrayOf(findViewById(R.id.olympiads), findViewById(R.id.events), findViewById(R.id.associations))
+            }
+
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
-                when(position){
-                    0 -> findViewById<ImageButton>(R.id.olympiads)
-                    1 -> findViewById<ImageButton>(R.id.events)
-                    2 -> findViewById<ImageButton>(R.id.associations)
-                }
+                Anim.unActive(buttons[oldPos])
+                Anim.active(buttons[position])
+                oldPos = position
             }
         })
+
+
     }
 
-    fun onOlympClick(view: View?) { viewPager.currentItem = 0; if (view != null) Anim.scale(view) }
-    fun onEventClick(view: View?) { viewPager.currentItem = 1; if (view != null) Anim.scale(view) }
-    fun onAssocClick(view: View?) { viewPager.currentItem = 2; if (view != null) Anim.scale(view) }
+    // жмём кнопку и viewPager меняет фрагмент; кнопка реагирует на нажатие увеличением размера
+    fun onOlympClick(view: View) { viewPager.currentItem = 0; Anim.scale(view) }
+    fun onEventClick(view: View) { viewPager.currentItem = 1; Anim.scale(view) }
+    fun onAssocClick(view: View) { viewPager.currentItem = 2; Anim.scale(view) }
 }
