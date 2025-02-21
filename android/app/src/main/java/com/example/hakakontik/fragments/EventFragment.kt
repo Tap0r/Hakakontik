@@ -13,6 +13,13 @@ import com.example.hakakontik.databinding.EventsBinding
 import com.example.hakakontik.databinding.OlympiadsBinding
 
 
+class EventFragmentNavHost(): Fragment() {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.events_navhost, container, false)
+    }
+}
+
+
 class EventFragment: Fragment() {
     private var _binding: EventsBinding? = null
     private val binding
@@ -22,8 +29,8 @@ class EventFragment: Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = EventsBinding.inflate(layoutInflater)
-
     }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.events, container, false)
         val arrayAdapter: ArrayAdapter<*>

@@ -7,7 +7,10 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.Toast
+import android.widget.Button
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
 import com.example.hakakontik.R
 import com.example.hakakontik.databinding.OlympiadsBinding
 
@@ -36,6 +39,12 @@ import com.example.hakakontik.MainActivity
 import com.example.hakakontik.NotificationActivity
 
 
+class OlympFragmentNavHost: Fragment() {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        return inflater.inflate(R.layout.olympiads_navhost, container, false)
+    }
+}
+
 class OlympFragment: Fragment() {
     private var _binding: OlympiadsBinding? = null
     private val binding
@@ -48,15 +57,14 @@ class OlympFragment: Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = OlympiadsBinding.inflate(layoutInflater)
-
     }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.olympiads, container, false)
         val arrayAdapter: ArrayAdapter<*>
         val users = arrayOf(
             "ol1", "ol2", "ol3", "ol4", "ol5", "ol6", "ol7", "ol8",
-            "ol9", "ol10", "ol11", "ol12", "ol13", "ol14", "ol15", "ol16"
-        )
+            "ol9", "ol10", "ol11", "ol12", "ol13", "ol14", "ol15", "ol16")
 
         // access the listView from xml file
         listLv = view.findViewById(R.id.OlymList)
@@ -81,12 +89,6 @@ class OlympFragment: Fragment() {
             }
             sendNotification() // Trigger the notification
         }
-
-
-
-
-
-
         return view
     }
 
@@ -106,6 +108,7 @@ class OlympFragment: Fragment() {
             notificationManager.createNotificationChannel(notificationChannel)
         }
     }
+
     @SuppressLint("MissingPermission", "NotificationPermission")
     private fun sendNotification() {
         // Intent that triggers when the notification is tapped

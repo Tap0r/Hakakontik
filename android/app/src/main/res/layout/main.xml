@@ -15,9 +15,7 @@
             android:id="@+id/viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
-
-        </androidx.viewpager2.widget.ViewPager2>
+            android:layout_weight="1" />
 
         <LinearLayout
             android:id="@+id/buttons"
@@ -54,6 +52,15 @@
                 android:backgroundTint="#00FFFFFF"
                 android:onClick="onAssocClick"
                 android:src="@drawable/associations" />
+
+            <ImageButton
+                android:id="@+id/profile"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:onClick="onProfileClick"
+                android:src="@drawable/profile" />
         </LinearLayout>
 
     </LinearLayout>
