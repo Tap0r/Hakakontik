@@ -31,6 +31,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat.getSystemService
+import com.example.hakakontik.MainActivity
 
 import com.example.hakakontik.NotificationActivity
 
@@ -108,7 +109,7 @@ class OlympFragment: Fragment() {
     @SuppressLint("MissingPermission", "NotificationPermission")
     private fun sendNotification() {
         // Intent that triggers when the notification is tapped
-        val intent = Intent(requireContext(),NotificationActivity::class.java ).apply {
+        val intent = Intent(requireContext(),MainActivity::class.java ).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
         val pendingIntent = PendingIntent.getActivity(
