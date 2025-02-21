@@ -5,9 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.findNavController
-import com.example.hakakontik.R
-import com.example.hakakontik.databinding.FragmentProfileBinding
+
+import com.example.hakakontik.databinding.FragmentSettingsBinding
 import com.google.firebase.Firebase
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -21,61 +20,29 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [ProfileFragment.newInstance] factory method to
+ * Use the [SettingsFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class ProfileFragment : Fragment() {
+class SettingsFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-    private var _binding: FragmentProfileBinding? = null
+
+    private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        _binding = FragmentProfileBinding.inflate(inflater, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View{
+        _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         val view = binding.root
-
-        binding.settings.setOnClickListener {
-            view.findNavController().navigate(R.id.action_profileFragment_to_settingsFragment)
-        }
-        binding.notif.setOnClickListener {
-            view.findNavController().navigate(R.id.action_profileFragment_to_notificationsFragment)
-        }
-        binding.admin.setOnClickListener {
-            view.findNavController().navigate(R.id.action_profileFragment_to_adminFragment)
-        }
-        binding.post.setOnClickListener {
-            view.findNavController().navigate(R.id.action_profileFragment_to_postFragment)
-        }
-
-        return view
-    }
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
-    override fun onResume() {
-        super.onResume()
-
         val database = Firebase.database
-        val myRef = database.getReference("profile/0/admin")
-        myRef.addListenerForSingleValueEvent(object : ValueEventListener {
+        val myRef = database.getReference("profile/0/notification")
+
+        myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                val value = dataSnapshot.getValue()
-                if (value.toString().toBoolean()){
-                    binding.post.visibility = View.VISIBLE
-                }
-                else{
-                    binding.post.visibility = View.GONE
-                }
-
+                val value = dataSnapshot.value
 //                Log.d(TAG, "Value is: $value")
             }
 
@@ -84,7 +51,22 @@ class ProfileFragment : Fragment() {
 //                Log.w(TAG, "Failed to read value.", error.toException())
             }
         })
+        binding.checkNotif.setOnClickListener({
+            if(binding.checkNotif.isChecked){
 
+                myRef.setValue("True")
+            }
+            else{
+                myRef.setValue("False")
+            }
+        })
+
+        // Inflate the layout for this fragment
+        return view
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     companion object {
@@ -94,12 +76,12 @@ class ProfileFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment ProfileFragment.
+         * @return A new instance of fragment SettingsFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            ProfileFragment().apply {
+            SettingsFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
