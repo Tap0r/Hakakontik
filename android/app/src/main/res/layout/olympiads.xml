@@ -1,145 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/olympiads_scroll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
         <LinearLayout
-
-            android:id= "@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:layout_editor_absoluteX="-30dp"
-            tools:layout_editor_absoluteY="0dp"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/comfortaa_bold"
-                android:text="Олимпиады"
-                android:textColor="#260783"
-                android:textSize="22sp"
-                android:textStyle="bold"></TextView>
-        </LinearLayout>
-
-        <SearchView
-            android:id="@+id/OlympSearch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="#C2A0A0"
-            android:iconifiedByDefault="false"
-            android:orientation="vertical"
-            android:queryHint="Поиск"
-
-            tools:layout_editor_absoluteX="0dp" >
-
-        </SearchView>
-
-        <LinearLayout
-            android:id = "@+id/ChipLayout"
-            android:layout_marginTop="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
             android:orientation="vertical">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
+                android:text="ОЛИМПИАДЫ"
+                android:textAlignment="center"
+                android:textAppearance="@android:style/TextAppearance.Material.Large"
+                android:textSize="34sp" />
 
-
-                tools:layout_editor_absoluteX="-49dp">
-
-
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Математика"
-                    android:fontFamily="@font/comfortaa_bold"
-                    android:background="#D9D9D9"
-                    android:layout_marginRight="5dp"
-                    android:paddingRight="5dp"
-                    tools:layout_editor_absoluteX="136dp"></CheckBox>
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Физика"
-                    android:fontFamily="@font/comfortaa_bold"
-                    android:background="#D9D9D9"
-                    android:layout_marginRight="5dp"
-                    android:paddingRight="5dp"
-                    tools:layout_editor_absoluteX="136dp"></CheckBox>
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Информатика"
-                    android:fontFamily="@font/comfortaa_bold"
-                    android:background="#D9D9D9"
-                    android:layout_marginRight="5dp"
-                    android:paddingRight="5dp"
-                    tools:layout_editor_absoluteX="136dp"></CheckBox>
-            </LinearLayout>
-
-
-
-            <LinearLayout
+            <Button
+                android:id="@+id/fragmentnaebalo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="фрагмент на ебало" />
 
+            <Button
+                android:id="@+id/fragmentnaebalo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="фрагмент на ебало 2" />
 
-                tools:layout_editor_absoluteX="-49dp">
-
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Обществознание"
-                    android:fontFamily="@font/comfortaa_bold"
-                    android:background="#D9D9D9"
-                    android:layout_marginRight="5dp"
-                    android:paddingRight="5dp"
-                    tools:layout_editor_absoluteX="136dp"></CheckBox>
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Английский"
-                    android:fontFamily="@font/comfortaa_bold"
-                    android:background="#D9D9D9"
-                    android:layout_marginRight="5dp"
-                    android:paddingRight="5dp"
-                    tools:layout_editor_absoluteX="136dp"></CheckBox>
-
-
-            </LinearLayout>
+            <Button
+                android:id="@+id/fragmentnaebalo3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="фрагмент на ебало 3" />
         </LinearLayout>
-
-        <ListView
-
-            android:id="@+id/OlymList"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
-            android:background="#7A6969"
-            android:fontFamily="@font/comfortaa_bold"
-
-            android:textSize="16dp"
-            android:visibility="visible"
-
-            />
-    </LinearLayout>
-
+    </ScrollView>
 
 </FrameLayout>
