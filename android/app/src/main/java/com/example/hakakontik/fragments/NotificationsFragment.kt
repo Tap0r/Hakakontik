@@ -1,4 +1,4 @@
-package com.example.xakatonroomstipa
+package com.example.hakakontik.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

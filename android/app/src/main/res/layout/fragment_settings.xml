@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsFragment"
+
     android:orientation="vertical"
     android:padding="10dp">
 
@@ -13,6 +13,10 @@
         android:layout_height="wrap_content"
         android:text="settings"
         android:gravity="center_horizontal"
+
+        android:fontFamily="@font/comfortaa_bold"
+        android:textColor="#260763"
+        android:textSize="22sp"
         />
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,17 +24,16 @@
         android:orientation="horizontal"
         android:layout_marginTop="50dp">
         
-        <TextView
-            
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="уведомления"
 
-            />
         <CheckBox
             android:id="@+id/check_notif"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:text="Уведомления"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/comfortaa_bold"
+            android:textSize="22sp"
+            >
 
         </CheckBox>
 

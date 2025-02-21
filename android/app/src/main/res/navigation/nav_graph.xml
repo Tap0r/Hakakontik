@@ -30,7 +30,7 @@
         tools:layout="@layout/fragment_admin" />
     <fragment
         android:id="@+id/notificationsFragment"
-        android:name="com.example.xakatonroomstipa.NotificationsFragment"
+        android:name="com.example.hakakontik.fragments.NotificationsFragment"
         android:label="fragment_notifications"
         tools:layout="@layout/fragment_notifications" />
     <fragment
@@ -40,7 +40,7 @@
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/postFragment"
-        android:name="com.example.xakatonroomstipa.PostFragment"
+        android:name="com.example.hakakontik.fragments.PostFragment"
         android:label="fragment_post"
         tools:layout="@layout/fragment_post" />
 </navigation>

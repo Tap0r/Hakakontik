@@ -11,7 +11,7 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapte
         0 -> OlympFragmentNavHost()
         1 -> EventFragmentNavHost()
         2 -> AssocFragmentNavHost()
-        3 -> ProfileFragment()
+        3 -> ProfileFragmentNavHost()
         else -> throw IllegalStateException()
     }
 }

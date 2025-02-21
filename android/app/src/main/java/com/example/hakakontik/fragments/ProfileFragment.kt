@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import com.example.hakakontik.R
 import com.example.hakakontik.databinding.FragmentProfileBinding
 import com.google.firebase.Firebase
@@ -19,6 +21,13 @@ import com.google.firebase.database.database
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
+
+class ProfileFragmentNavHost: Fragment() {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.profile_navhost, container, false)
+    }
+}
+
 /**
  * A simple [Fragment] subclass.
  * Use the [ProfileFragment.newInstance] factory method to
@@ -31,25 +40,22 @@ class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val view = binding.root
 
         binding.settings.setOnClickListener {
-            view.findNavController().navigate(R.id.action_profileFragment_to_settingsFragment)
+            NavHostFragment.findNavController(this).navigate(R.id.settingsFragment)
         }
         binding.notif.setOnClickListener {
-            view.findNavController().navigate(R.id.action_profileFragment_to_notificationsFragment)
+            NavHostFragment.findNavController(this).navigate(R.id.notificationsFragment)
         }
         binding.admin.setOnClickListener {
-            view.findNavController().navigate(R.id.action_profileFragment_to_adminFragment)
+            NavHostFragment.findNavController(this).navigate(R.id.adminFragment)
         }
         binding.post.setOnClickListener {
-            view.findNavController().navigate(R.id.action_profileFragment_to_postFragment)
+            NavHostFragment.findNavController(this).navigate(R.id.postFragment)
         }
 
         return view

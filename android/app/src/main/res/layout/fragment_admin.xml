@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminFragment"
+
     android:padding="10dp"
     android:orientation="vertical">
 
@@ -11,8 +10,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="admin"
+        android:text="Панель администратора"
         android:layout_gravity="center_horizontal"
+
+        android:fontFamily="@font/comfortaa_bold"
+        android:textColor="#260763"
+        android:textSize="22sp"
         />
 
     <EditText
@@ -20,6 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Введите код"
+        android:fontFamily="@font/comfortaa_bold"
         android:layout_gravity="center_horizontal">
 
     </EditText>
@@ -27,7 +31,11 @@
         android:id="@+id/butt_adm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="xui"
+        android:layout_gravity="center"
+        android:text="Подтвердить"
+        android:background="@drawable/button_stroke"
+        android:padding="5dp"
+        android:fontFamily="@font/comfortaa_bold"
 
         />
 </LinearLayout>
