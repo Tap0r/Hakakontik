@@ -2,10 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-
     //firebase
     id("com.google.gms.google-services")
-
     //safeargs
     id("androidx.navigation.safeargs.kotlin")
 }
@@ -16,7 +14,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.hakakontik"
-        minSdk = 26
+        minSdk = 24
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
