@@ -4,24 +4,29 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.ListView
 import androidx.fragment.app.Fragment
 import com.example.hakakontik.R
-import android.Manifest
 import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context.NOTIFICATION_SERVICE
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.graphics.Color
 import android.os.Build
-import androidx.core.app.ActivityCompat
+import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import androidx.navigation.NavDirections
+import androidx.recyclerview.widget.RecyclerView
 import com.example.hakakontik.MainActivity
+import com.example.hakakontik.databinding.OlympiadsBinding
+import com.example.hakakontik.utils.FirebaseListAdapter
+import com.google.firebase.Firebase
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.database
 
 
 class OlympFragmentNavHost: Fragment() {
@@ -31,10 +36,11 @@ class OlympFragmentNavHost: Fragment() {
 }
 
 class OlympFragment: Fragment() {
-//    private var _binding: OlympiadsBinding? = null
-//    private val binding
-//        get() = _binding ?: throw IllegalStateException("_binding is null")
-    lateinit var listLv: ListView
+    private var _binding: OlympiadsBinding? = null
+    private val binding
+        get() = _binding ?: throw IllegalStateException("_binding is null")
+
+    lateinit var listLv: RecyclerView
     private val channelId = "i.apps.notifications" // Unique channel ID for notifications
     private val description = "Test notification"  // Description for the notification channel
     private val notificationId = 1234
@@ -45,35 +51,62 @@ class OlympFragment: Fragment() {
 //    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.olympiads, container, false)
-        val arrayAdapter: ArrayAdapter<*>
-        val users = arrayOf(
-            "ol1", "ol2", "ol3", "ol4", "ol5", "ol6", "ol7", "ol8",
-            "ol9", "ol10", "ol11", "ol12", "ol13", "ol14", "ol15", "ol16")
+        _binding = OlympiadsBinding.inflate(inflater, container, false)
+        val view = binding.root
 
         // access the listView from xml file
-        listLv = view.findViewById(R.id.OlymList)
-        arrayAdapter = ArrayAdapter(requireContext(), R.layout.list_item_style, users)
-        listLv.adapter = arrayAdapter
-        createNotificationChannel()
-        listLv.setOnItemClickListener {parent, view, position, id ->
-            // Request runtime permission for notifications on Android 13 and higher
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                if (ActivityCompat.checkSelfPermission(
-                        requireContext(),
-                        Manifest.permission.POST_NOTIFICATIONS
-                    ) != PackageManager.PERMISSION_GRANTED
-                ) {
-                    ActivityCompat.requestPermissions(
-                        requireActivity(),
-                        arrayOf(Manifest.permission.POST_NOTIFICATIONS),
-                        101
-                    )
-                    return@setOnItemClickListener
-                }
-            }
-            sendNotification() // Trigger the notification
+        listLv = binding.OlymList
+
+
+        val database = Firebase.database
+        val ref = database.getReference("olimp")
+
+        val action: (Int, String) -> NavDirections = { id, ref ->
+            OlympFragmentDirections.actionOlympFragmentToPublicationFragment(id, ref)
         }
+
+        ref.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val value = dataSnapshot.value as ArrayList<Map<String, String>>
+                val adapter = FirebaseListAdapter(value, "olimp", action)
+                listLv.adapter = adapter
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                // Failed to read value
+                Log.w("test", "Failed to read value.", error.toException())
+            }
+        })
+
+
+//        val users = arrayOf(
+//            "ol1", "ol2", "ol3", "ol4", "ol5", "ol6", "ol7", "ol8",
+//            "ol9", "ol10", "ol11", "ol12", "ol13", "ol14", "ol15", "ol16")
+//        val arrayAdapter: ArrayAdapter<*>
+//        arrayAdapter = ArrayAdapter(requireContext(), R.layout.list_item_style, users)
+//        listLv.adapter = arrayAdapter
+
+
+        createNotificationChannel()
+//        listLv.setOnItemClickListener {parent, view, position, id ->
+//            // Request runtime permission for notifications on Android 13 and higher
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+//                if (ActivityCompat.checkSelfPermission(
+//                        requireContext(),
+//                        Manifest.permission.POST_NOTIFICATIONS
+//                    ) != PackageManager.PERMISSION_GRANTED
+//                ) {
+//                    ActivityCompat.requestPermissions(
+//                        requireActivity(),
+//                        arrayOf(Manifest.permission.POST_NOTIFICATIONS),
+//                        101
+//                    )
+//                    return@setOnItemClickListener
+//                }
+//            }
+//            sendNotification() // Trigger the notification
+//        }
+
         return view
     }
 

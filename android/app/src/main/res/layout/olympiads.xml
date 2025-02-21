@@ -126,7 +126,9 @@
             </LinearLayout>
         </LinearLayout>
 
-        <ListView
+
+
+        <androidx.recyclerview.widget.RecyclerView
 
             android:id="@+id/OlymList"
             android:layout_width="match_parent"
@@ -137,7 +139,7 @@
 
             android:textSize="16dp"
             android:visibility="visible"
-
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             />
     </LinearLayout>
 
