@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a34d0641-8d5e-451f-ba6a-2d4fb181ed5a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hakakontik/fragments/ProfileFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hakakontik/fragments/PublicationFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/profile.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/profile_black.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/profile_blue.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/associations_navhost.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/events_navhost.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/olympiads_navhost.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/profile.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/profile_navhost.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/publication.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/navigation/assoc_nav.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/navigation/events_nav.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/navigation/olymp_nav.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/navigation/profile_nav.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../svg/profile_black.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../svg/profile_blue.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hakakontik/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hakakontik/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hakakontik/fragments/AssocFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hakakontik/fragments/AssocFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hakakontik/fragments/EventFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hakakontik/fragments/EventFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hakakontik/fragments/FragmentAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hakakontik/fragments/FragmentAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hakakontik/fragments/OlympFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hakakontik/fragments/OlympFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/olympiads.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/olympiads.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Полезные кусочки кода" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../пидарасы.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2tMBhtS5UnW5iQhNpm55ZE49s8S" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "android.gradle.sync.needed": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "Merging Все-кроме-кода",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a34d0641-8d5e-451f-ba6a-2d4fb181ed5a" name="Changes" comment="" />
+      <created>1740152187149</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740152187149</updated>
+    </task>
+    <servers />
+  </component>
+</project>
