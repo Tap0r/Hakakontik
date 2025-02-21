@@ -4,33 +4,45 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/title"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ПУБЛИКАЦИЯ"
-        android:textAlignment="center"
-        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/publicationtext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ебал в сраку"
-        android:textAlignment="center"
-        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/pub_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ебал в сраку"
-        android:textAlignment="center"
-        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ПУБЛИКАЦИЯ"
+                android:textAlignment="center"
+                android:textAppearance="@android:style/TextAppearance.Material.Large" />
 
-    <Button
-        android:id="@+id/publicationbutton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="назад" />
+            <TextView
+                android:id="@+id/publicationtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ебал в сраку"
+                android:textAlignment="center"
+                android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+            <TextView
+                android:id="@+id/pub_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ебал в сраку"
+                android:textAlignment="center"
+                android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+            <Button
+                android:id="@+id/publicationbutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="назад" />
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>
