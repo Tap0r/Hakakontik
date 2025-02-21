@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Профиль"
+            android:layout_gravity="center"
+
+            android:fontFamily="@font/comfortaa_bold"
+            android:textColor="#260763"
+            android:textSize="22sp"
+
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="200dp"
+            android:id="@+id/settings"
+            android:background = "#D9D9D9"
+            >
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/profile_icon"
+                android:layout_gravity="center"
+
+                >
+
+            </ImageView>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="settings"
+                android:layout_gravity="center"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textSize="22sp"
+                android:paddingTop="0dp"
+
+
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:id="@+id/notif"
+            android:background = "#D9D9D9"
+
+            >
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/profile_icon"
+                android:layout_gravity="center"
+
+                ></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="notifications"
+                android:fontFamily="@font/comfortaa_bold"
+                android:layout_gravity="center"
+                android:textSize="22sp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:id="@+id/admin"
+            android:background = "#D9D9D9"
+            >
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/profile_icon"
+                android:layout_gravity="center"
+
+                ></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="admin"
+                android:fontFamily="@font/comfortaa_bold"
+                android:layout_gravity="center"
+                android:textSize="22sp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:id="@+id/post"
+            android:background = "#D9D9D9"
+            >
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/profile_icon"
+                android:layout_gravity="center"
+
+                ></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="post"
+                android:fontFamily="@font/comfortaa_bold"
+                android:layout_gravity="center"
+                android:textSize="22sp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
