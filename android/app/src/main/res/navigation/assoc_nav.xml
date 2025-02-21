@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/assoc_nav"
     app:startDestination="@id/assocFragment">
-
     <fragment
         android:id="@+id/assocFragment"
         android:name="com.example.hakakontik.fragments.AssocFragment"

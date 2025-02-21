@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/events_publication"
     app:startDestination="@id/eventFragment">
-
     <fragment
         android:id="@+id/eventFragment"
         android:name="com.example.hakakontik.fragments.EventFragment"
@@ -17,7 +16,7 @@
         android:name="com.example.hakakontik.fragments.PublicationFragment"
         android:label="PublicationFragment" >
         <action
-            android:id="@+id/action_publicationFragment3_to_eventFragment"
+            android:id="@+id/action_publicationFragment_to_eventFragment"
             app:destination="@id/eventFragment" />
         <argument
             android:name="id"

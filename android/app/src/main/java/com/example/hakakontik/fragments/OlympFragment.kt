@@ -6,37 +6,22 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ListView
-import android.widget.Toast
-import android.widget.Button
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.NavHostFragment
 import com.example.hakakontik.R
-import com.example.hakakontik.databinding.OlympiadsBinding
-
 import android.Manifest
 import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
-import android.app.Service
-import android.content.Context
 import android.content.Context.NOTIFICATION_SERVICE
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.os.Build
-
-import android.widget.Button
-import android.widget.RemoteViews
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import androidx.core.content.ContextCompat.getSystemService
 import com.example.hakakontik.MainActivity
-
-import com.example.hakakontik.NotificationActivity
 
 
 class OlympFragmentNavHost: Fragment() {
@@ -46,18 +31,18 @@ class OlympFragmentNavHost: Fragment() {
 }
 
 class OlympFragment: Fragment() {
-    private var _binding: OlympiadsBinding? = null
-    private val binding
-        get() = _binding ?: throw IllegalStateException("_binding is null")
+//    private var _binding: OlympiadsBinding? = null
+//    private val binding
+//        get() = _binding ?: throw IllegalStateException("_binding is null")
     lateinit var listLv: ListView
     private val channelId = "i.apps.notifications" // Unique channel ID for notifications
     private val description = "Test notification"  // Description for the notification channel
     private val notificationId = 1234
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        _binding = OlympiadsBinding.inflate(layoutInflater)
-    }
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        _binding = OlympiadsBinding.inflate(layoutInflater)
+//    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.olympiads, container, false)

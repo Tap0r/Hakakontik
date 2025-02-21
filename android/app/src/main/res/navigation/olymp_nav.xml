@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/olymp_publication"
     app:startDestination="@id/olympFragment">
-
     <fragment
         android:id="@+id/olympFragment"
         android:name="com.example.hakakontik.fragments.OlympFragment"
