@@ -8,6 +8,13 @@ import androidx.fragment.app.Fragment
 import com.example.hakakontik.R
 
 
+class EventFragmentNavHost(): Fragment() {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.events_navhost, container, false)
+    }
+}
+
+
 class EventFragment(): Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.events, container, false)

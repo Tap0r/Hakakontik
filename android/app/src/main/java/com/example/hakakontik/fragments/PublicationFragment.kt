@@ -6,14 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import com.example.hakakontik.R
 
 
-class PublicationFragment(): Fragment() {
-    lateinit var textV: TextView
+class PublicationFragment: Fragment() {
+    private lateinit var textV: TextView
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val inflatedView = inflater.inflate(R.layout.publication, container, false)
         textV = inflatedView.findViewById(R.id.publicationtext)

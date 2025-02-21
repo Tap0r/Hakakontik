@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/events_publication"
+    app:startDestination="@id/eventFragment">
+
+    <fragment
+        android:id="@+id/eventFragment"
+        android:name="com.example.hakakontik.fragments.EventFragment"
+        android:label="EventFragment" >
+        <action
+            android:id="@+id/action_eventFragment_to_publicationFragment"
+            app:destination="@id/publicationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/publicationFragment"
+        android:name="com.example.hakakontik.fragments.PublicationFragment"
+        android:label="PublicationFragment" >
+        <action
+            android:id="@+id/action_publicationFragment3_to_eventFragment"
+            app:destination="@id/eventFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+</navigation>

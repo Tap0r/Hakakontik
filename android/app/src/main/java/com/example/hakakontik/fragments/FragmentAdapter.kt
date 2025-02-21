@@ -9,9 +9,9 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapte
 
     override fun createFragment(position: Int): Fragment = when(position) {
         0 -> OlympFragmentNavHost()
-        1 -> EventFragment()
-        2 -> AssocFragment()
-        3 -> ProfileFragment()
+        1 -> EventFragmentNavHost()
+        2 -> AssocFragmentNavHost()
+        3 -> ProfileFragmentNavHost()
         else -> throw IllegalStateException()
     }
 }

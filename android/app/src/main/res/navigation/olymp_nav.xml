@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph"
+    android:id="@+id/olymp_publication"
     app:startDestination="@id/olympFragment">
 
-    <fragment
-        android:id="@+id/assocFragment"
-        android:name="com.example.hakakontik.fragments.AssocFragment"
-        android:label="AssocFragment" >
-        <action
-            android:id="@+id/action_assocFragment_to_publicationFragment"
-            app:destination="@id/publicationFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/eventFragment"
-        android:name="com.example.hakakontik.fragments.EventFragment"
-        android:label="EventFragment" >
-        <action
-            android:id="@+id/action_eventFragment_to_publicationFragment"
-            app:destination="@id/publicationFragment" />
-    </fragment>
     <fragment
         android:id="@+id/olympFragment"
         android:name="com.example.hakakontik.fragments.OlympFragment"
@@ -33,14 +17,8 @@
         android:name="com.example.hakakontik.fragments.PublicationFragment"
         android:label="PublicationFragment" >
         <action
-            android:id="@+id/action_publicationFragment_to_eventFragment"
-            app:destination="@id/eventFragment" />
-        <action
             android:id="@+id/action_publicationFragment_to_olympFragment"
             app:destination="@id/olympFragment" />
-        <action
-            android:id="@+id/action_publicationFragment_to_assocFragment"
-            app:destination="@id/assocFragment" />
         <argument
             android:name="id"
             app:argType="integer" />
