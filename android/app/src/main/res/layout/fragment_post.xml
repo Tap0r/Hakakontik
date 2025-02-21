@@ -24,6 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -34,8 +35,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/comfortaa_bold"
-                    android:text="Введите название"
 
+                    android:hint="Введите название"
                     android:textSize="15dp">
 
                 </EditText>
@@ -50,7 +51,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/comfortaa_bold"
-                    android:text="Введите краткое описание"
+                    android:hint="Введите краткое описание"
                     android:textSize="15dp">
 
                 </EditText>
@@ -65,7 +66,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/comfortaa_bold"
-                    android:text="Введите полное описание"
+                    android:hint="Введите полное описание"
 
                     android:textSize="15dp">
 
@@ -81,7 +82,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/comfortaa_bold"
-                    android:text="Введите ссылку на олимпиаду"
+                    android:hint="Введите ссылку на олимпиаду"
                     android:textSize="15dp">
 
                 </EditText>
@@ -105,7 +106,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/comfortaa_bold"
-                    android:text="19">
+                    android:hint="19">
 
                 </EditText>
 
@@ -114,7 +115,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/comfortaa_bold"
-                    android:text="06">
+                    android:hint="06">
 
                 </EditText>
 
@@ -123,23 +124,45 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:text="24">
+                    android:hint="24">
 
                 </EditText>
+
             </LinearLayout>
 
-            <Button
-                android:id="@+id/create"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
                 android:layout_marginTop="50dp"
-                android:background="@drawable/button_stroke"
-                android:fontFamily="@font/comfortaa_bold"
-                android:padding="5dp"
-                android:text="Создать новость">
+                android:orientation="horizontal">
 
-            </Button>
+                <Button
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_stroke"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:padding="5dp"
+                    android:text="Назад">
+
+                </Button>
+
+                <Button
+                    android:id="@+id/create"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_stroke"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:lineSpacingExtra="10sp"
+                    android:text="Создать новость">
+
+                </Button>
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>

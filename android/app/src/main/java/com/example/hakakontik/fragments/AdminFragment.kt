@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import com.example.hakakontik.databinding.FragmentAdminBinding
 import com.google.firebase.Firebase
 import com.google.firebase.database.DataSnapshot
@@ -31,22 +32,21 @@ class AdminFragment : Fragment() {
 
     private var _binding: FragmentAdminBinding? = null
     private val binding get() = _binding!!
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentAdminBinding.inflate(inflater, container, false)
-        val view = binding.root
-        val database = Firebase.database
-        val myRef = database.getReference("profile/0/admin")
-        val admin_pass = "7279239073"
+        val myRef = Firebase.database.getReference("profile/0/admin")
+        val adminPass = "7279239073"
         binding.buttAdm.setOnClickListener{
-            if (admin_pass == binding.admCode.text.toString()){
+            if (adminPass == binding.admCode.text.toString()){
                 myRef.setValue("True")
             }
         }
-        // Inflate the layout for this fragment
-        return view
+
+        binding.btnBack.setOnClickListener {
+            NavHostFragment.findNavController(this).popBackStack()
+        }
+
+        return binding.root
     }
 
     companion object {

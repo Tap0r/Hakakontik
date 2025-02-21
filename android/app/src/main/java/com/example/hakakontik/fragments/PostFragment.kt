@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.NavHostFragment
 import com.example.hakakontik.databinding.FragmentPostBinding
 import com.google.firebase.Firebase
 import com.google.firebase.database.DataSnapshot
@@ -32,9 +33,7 @@ class PostFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, sI: Bundle?): View {
         _binding = FragmentPostBinding.inflate(inflater, container, false)
-        val view = binding.root
-        val database = Firebase.database
-        val myRef = database.getReference("olimp")
+        val myRef = Firebase.database.getReference("olimp")
         var dict = mutableMapOf("date" to "xui","full_description" to "xui", "link" to "xui","short_description" to "xui","title" to "xui")
         binding.create.setOnClickListener{
             myRef.addListenerForSingleValueEvent(object : ValueEventListener {
@@ -65,8 +64,12 @@ class PostFragment : Fragment() {
 
         }
 
+        binding.btnBack.setOnClickListener {
+            NavHostFragment.findNavController(this).popBackStack()
+        }
+
         // Inflate the layout for this fragment
-        return view
+        return binding.root
     }
 
     companion object {

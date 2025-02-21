@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.NavHostFragment
 
 import com.example.hakakontik.databinding.FragmentSettingsBinding
 import com.google.firebase.Firebase
@@ -34,9 +35,7 @@ class SettingsFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View{
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
-        val view = binding.root
-        val database = Firebase.database
-        val myRef = database.getReference("profile/0/notification")
+        val myRef = Firebase.database.getReference("profile/0/notification")
 
         myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -51,19 +50,22 @@ class SettingsFragment : Fragment() {
 //                Log.w(TAG, "Failed to read value.", error.toException())
             }
         })
-        binding.checkNotif.setOnClickListener({
-            if(binding.checkNotif.isChecked){
 
+        binding.checkNotif.setOnClickListener({
+            if(binding.checkNotif.isChecked)
                 myRef.setValue("True")
-            }
-            else{
+            else
                 myRef.setValue("False")
-            }
         })
 
+        binding.btnBack.setOnClickListener {
+            NavHostFragment.findNavController(this).popBackStack()
+        }
+
         // Inflate the layout for this fragment
-        return view
+        return binding.root
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
