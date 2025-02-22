@@ -69,7 +69,32 @@ class OlympFragment: Fragment() {
 
 
         val database = Firebase.database
-        val ref = database.getReference("olimp")
+        val olimpRef = database.getReference("olimp")
+        val favRef = database.getReference("favorite/")
+        val favMapRef = database.getReference("favorite/map")
+        val favs = arrayListOf<String>()
+
+        favRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                if (dataSnapshot.value != null){
+                    if (dataSnapshot.value!!::class == HashMap::class) {
+                        val value = dataSnapshot.child("map").value as ArrayList<String>
+                        favs.addAll(value)
+                    }
+                    else {
+                        val value = dataSnapshot.value as ArrayList<String>
+                        favs.addAll(value)
+                    }
+
+                }
+
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                // Failed to read value
+                Log.w("test", "Failed to read value.", error.toException())
+            }
+        })
 
         val action: (Int, String) -> NavDirections = { id, ref ->
             OlympFragmentDirections.actionOlympFragmentToPublicationFragment(id, ref)
@@ -77,7 +102,7 @@ class OlympFragment: Fragment() {
 
         }
 
-        ref.addValueEventListener(object : ValueEventListener {
+        olimpRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
 
                         if(cnt>1)
@@ -89,7 +114,7 @@ class OlympFragment: Fragment() {
 
 
                 val value = dataSnapshot.value as ArrayList<Map<String, String>>
-                val adapter = FirebaseListAdapter(value, "olimp", action)
+                val adapter = FirebaseListAdapter(value, favs, "olimp", action)
                 listLv.adapter = adapter
 
             }

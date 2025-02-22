@@ -62,7 +62,7 @@ class EventFragment: Fragment() {
         ref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val value = dataSnapshot.value as ArrayList<Map<String, String>>
-                val adapter = FirebaseListAdapter(value, "news", action)
+                val adapter = FirebaseListAdapter(value, null, "news", action)
                 listLv.adapter = adapter
             }
 
