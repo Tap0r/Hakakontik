@@ -34,6 +34,11 @@
             android:layout_height="wrap_content"
             />
 
+        <CheckBox
+            android:id="@+id/is_fav"
+            android:layout_width="25dp"
+            android:layout_height="25dp"/>
+
     </LinearLayout>
 
 
