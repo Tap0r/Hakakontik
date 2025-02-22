@@ -29,18 +29,7 @@ class AssocFragment: Fragment() {
         _binding = AssociationsBinding.inflate(inflater, container, false)
         val view = binding.root
 
-//        val arrayAdapter: ArrayAdapter<*>
-//        val users = arrayOf(
-//            "as1", "as2", "as3", "as4", "as5", "as6", "as7", "as8",
-//            "as9", "as10", "as11", "as12", "as13", "as14", "as15", "as16")
-
-        // access the listView from xml file
-        listLv = binding.AssList
-//        arrayAdapter = ArrayAdapter(requireContext(), R.layout.list_item_style, users)
-//        listLv.adapter = arrayAdapter
-        listLv.setOnItemClickListener { parent, view, position, id ->
-            Toast.makeText(requireContext(), parent.getPositionForView(view).toString(), Toast.LENGTH_SHORT).show()
-        }
+//
 
         return view
     }

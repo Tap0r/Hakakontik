@@ -10,7 +10,9 @@ import com.example.hakakontik.databinding.ListItemStyleBinding
 class FirebaseListAdapter(private val items: ArrayList<Map<String, String>>,
                           private val ref: String,
                           private val action: (Int, String) -> NavDirections) :
+
     RecyclerView.Adapter<FirebaseListAdapter.ViewHolder>() {
+
 
     class ViewHolder(binding: ListItemStyleBinding) : RecyclerView.ViewHolder(binding.root) {
         var title = binding.title
@@ -18,6 +20,7 @@ class FirebaseListAdapter(private val items: ArrayList<Map<String, String>>,
         var date = binding.date
         var root = binding.root
     }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -32,6 +35,7 @@ class FirebaseListAdapter(private val items: ArrayList<Map<String, String>>,
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
         holder.title.text = item["title"]
+
         holder.shortDescription.text = item["short_description"]
         holder.date.text = item["date"]
         holder.root.setOnClickListener {
@@ -41,6 +45,7 @@ class FirebaseListAdapter(private val items: ArrayList<Map<String, String>>,
         }
 
     }
+
 
 
 }

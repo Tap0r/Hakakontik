@@ -133,9 +133,10 @@
             android:id="@+id/OlymList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
-            android:background="#7A6969"
+
+            android:background="@color/white"
             android:fontFamily="@font/comfortaa_bold"
+
 
             android:textSize="16dp"
             android:visibility="visible"

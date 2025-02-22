@@ -14,7 +14,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.hakakontik"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -49,6 +49,8 @@ dependencies {
     //firebase
     implementation(platform("com.google.firebase:firebase-bom:33.9.0"))
     implementation("com.google.firebase:firebase-database")
+    implementation ("androidx.core:core-ktx:1.7.0")
+    implementation ("androidx.work:work-runtime-ktx:2.7.0")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

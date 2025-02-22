@@ -17,14 +17,17 @@
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/comfortaa_bold"
                 android:text="ПУБЛИКАЦИЯ"
                 android:textAlignment="center"
-                android:textAppearance="@android:style/TextAppearance.Material.Large" />
+                android:textAppearance="@android:style/TextAppearance.Material.Large"
+                android:textColor="#260760" />
 
             <TextView
                 android:id="@+id/publicationtext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/comfortaa_bold"
                 android:text="ебал в сраку"
                 android:textAlignment="center"
                 android:textAppearance="@android:style/TextAppearance.Material.Large" />
@@ -33,6 +36,7 @@
                 android:id="@+id/pub_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/comfortaa_bold"
                 android:text="ебал в сраку"
                 android:textAlignment="center"
                 android:textAppearance="@android:style/TextAppearance.Material.Large" />
@@ -41,6 +45,7 @@
                 android:id="@+id/publicationbutton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_stroke"
                 android:text="назад" />
         </LinearLayout>
     </ScrollView>

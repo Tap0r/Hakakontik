@@ -121,6 +121,7 @@
             android:layout_marginTop="40dp"
             android:id="@+id/post"
             android:background = "#D9D9D9"
+            android:visibility="gone"
             >
             <ImageView
                 android:layout_width="25dp"
@@ -137,6 +138,7 @@
                 android:fontFamily="@font/comfortaa_bold"
                 android:layout_gravity="center"
                 android:textSize="22sp"
+
                 />
 
         </LinearLayout>
