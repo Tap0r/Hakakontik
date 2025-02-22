@@ -32,7 +32,11 @@
         android:id="@+id/notificationsFragment"
         android:name="com.example.hakakontik.fragments.NotificationsFragment"
         android:label="fragment_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_notifications" >
+        <action
+            android:id="@+id/action_notificationsFragment_to_publicationFragment2"
+            app:destination="@id/publicationFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.hakakontik.fragments.SettingsFragment"
@@ -43,4 +47,15 @@
         android:name="com.example.hakakontik.fragments.PostFragment"
         android:label="fragment_post"
         tools:layout="@layout/fragment_post" />
+    <fragment
+        android:id="@+id/publicationFragment2"
+        android:name="com.example.hakakontik.fragments.PublicationFragment"
+        android:label="PublicationFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="ref"
+            app:argType="string" />
+    </fragment>
 </navigation>

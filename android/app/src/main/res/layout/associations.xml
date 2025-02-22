@@ -45,21 +45,71 @@
             tools:layout_editor_absoluteX="0dp" >
 
         </SearchView>
-
-
-        <ListView
-
-            android:id="@+id/AssList"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:text = "Фотоклуб 'Иллюминатор' им. Владимира Каковкина\nhttps://vk.com/ph.illuminator"
             android:fontFamily="@font/comfortaa_bold"
+            android:textSize="20sp"
+            android:autoLink="web"
+            android:background="@drawable/assoc_textview_shape"
+            android:textColor="@color/black">
 
-            android:textSize="16dp"
-            android:visibility="visible"
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text = "SUE | Samara University eSports\nhttps://vk.com/suesports?from=search"
+            android:fontFamily="@font/comfortaa_bold"
+            android:textSize="20sp"
+            android:autoLink="web"
+            android:background="@drawable/assoc_textview_shape"
+            android:textColor="@color/black">
 
-            />
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text = "Студенческий робототехнический клуб 'ROBOTIC'\nhttps://vk.com/robotic_samara"
+            android:fontFamily="@font/comfortaa_bold"
+            android:textSize="20sp"
+            android:autoLink="web"
+            android:background="@drawable/assoc_textview_shape"
+            android:textColor="@color/black">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text = "Музыкальный клуб 'Белый рояль'\nhttps://vk.com/whitegrandpiano"
+            android:fontFamily="@font/comfortaa_bold"
+            android:textSize="20sp"
+            android:autoLink="web"
+            android:background="@drawable/assoc_textview_shape"
+            android:textColor="@color/black">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text = "Волонтерский центр Самарского университета\nvk.com/volunteers_samara_university"
+            android:fontFamily="@font/comfortaa_bold"
+            android:textSize="20sp"
+            android:autoLink="web"
+            android:background="@drawable/assoc_textview_shape"
+            android:textColor="@color/black">
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text = "Олимпиадная подготовка по физике\nhttps://ssau.ru/recreation/training/fiz"
+            android:fontFamily="@font/comfortaa_bold"
+            android:textSize="20sp"
+            android:autoLink="web"
+            android:background="@drawable/assoc_textview_shape"
+            android:textColor="@color/black">
+
+        </TextView>
     </LinearLayout>
 
 </FrameLayout>

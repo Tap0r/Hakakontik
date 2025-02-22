@@ -70,15 +70,17 @@ class FirebaseListAdapter(private val items: ArrayList<Map<String, String>>,
         val rootRef = database.getReference("/")
         var res: ArrayList<String>
         holder.isFav.setOnClickListener {
+            var cnt = 0
 
             favoriteReference.addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    if (dataSnapshot.value == null) {
-                        val initVal = arrayListOf("${holder.bindingAdapterPosition} ${if (holder.isFav.isChecked) "1" else "0"}")
-                        favoriteReference.child("map").setValue(initVal)
-                    }
-                    else {
-                        val value = dataSnapshot.child("map").value as ArrayList<String>
+                    if (cnt==0) {
+                        if (dataSnapshot.value == null) {
+                            val initVal =
+                                arrayListOf("${holder.bindingAdapterPosition} ${if (holder.isFav.isChecked) "1" else "0"}")
+                            favoriteReference.child("map").setValue(initVal)
+                        } else {
+                            val value = dataSnapshot.child("map").value as ArrayList<String>
 //                        Log.d("test", "1${temp}")
 //                        Log.d("test", "2${temp::class.simpleName}")
 //                        Log.d("test", "3${temp[1]}")
@@ -86,19 +88,19 @@ class FirebaseListAdapter(private val items: ArrayList<Map<String, String>>,
 //                        val temp0 = temp[0]
 //                        var value = temp.toMutableMap()
 
-                        if (holder.isFav.isChecked) {
+                            if (holder.isFav.isChecked) {
 
-                            value.add("${holder.bindingAdapterPosition} 1")
-                            favoriteReference.child("map").setValue(value)
-                        }
-                        else {
+                                value.add("${holder.bindingAdapterPosition} 1")
+                                favoriteReference.child("map").setValue(value)
+                            } else {
 //                            val regex = Regex("^1")
-                            value.removeAll{ it[0].toString() == holder.bindingAdapterPosition.toString() }
-                            favoriteReference.child("map").setValue(value)
+                                value.removeAll { it[0].toString() == holder.bindingAdapterPosition.toString() }
+                                favoriteReference.child("map").setValue(value)
+                            }
                         }
+
                     }
-
-
+                    cnt++
                 }
 
                 override fun onCancelled(error: DatabaseError) {

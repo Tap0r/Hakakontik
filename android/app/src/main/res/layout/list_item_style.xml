@@ -13,33 +13,29 @@
         android:id="@+id/item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#260763"
             android:fontFamily="@font/comfortaa_bold"
-            android:textSize="18sp"
-            />
+            android:textColor="#260763"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/short_descrip"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
             android:fontFamily="@font/comfortaa_bold"
-            />
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#D9D9D9"
             android:fontFamily="@font/comfortaa_bold"
-            />
+            android:textColor="#D9D9D9" />
 
         <CheckBox
             android:id="@+id/is_fav"
