@@ -1,0 +1,55 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+  <path
+      android:pathData="m52,17.84h-40a1.5,1.5 0,0 0,0 3h40a1.5,1.5 0,0 0,0 -3z">
+    <aapt:attr name="android:fillColor">
+      <gradient 
+          android:startX="10.52"
+          android:startY="19.34"
+          android:endX="53.48"
+          android:endY="19.34"
+          android:type="linear">
+        <item android:offset="0" android:color="#FF0170FE"/>
+        <item android:offset="0.38" android:color="#FF035ED4"/>
+        <item android:offset="0.79" android:color="#FF044DAD"/>
+        <item android:offset="1" android:color="#FF05479E"/>
+      </gradient>
+    </aapt:attr>
+  </path>
+  <path
+      android:pathData="m42,30.5h-30a1.5,1.5 0,0 0,0 3h30a1.5,1.5 0,0 0,0 -3z">
+    <aapt:attr name="android:fillColor">
+      <gradient 
+          android:startX="10.52"
+          android:startY="32"
+          android:endX="43.48"
+          android:endY="32"
+          android:type="linear">
+        <item android:offset="0" android:color="#FF0170FE"/>
+        <item android:offset="0.38" android:color="#FF035ED4"/>
+        <item android:offset="0.79" android:color="#FF044DAD"/>
+        <item android:offset="1" android:color="#FF05479E"/>
+      </gradient>
+    </aapt:attr>
+  </path>
+  <path
+      android:pathData="m32,43.16h-20a1.5,1.5 0,0 0,0 3h20a1.5,1.5 0,0 0,0 -3z">
+    <aapt:attr name="android:fillColor">
+      <gradient 
+          android:startX="10.52"
+          android:startY="44.66"
+          android:endX="33.48"
+          android:endY="44.66"
+          android:type="linear">
+        <item android:offset="0" android:color="#FF0170FE"/>
+        <item android:offset="0.38" android:color="#FF035ED4"/>
+        <item android:offset="0.79" android:color="#FF044DAD"/>
+        <item android:offset="1" android:color="#FF05479E"/>
+      </gradient>
+    </aapt:attr>
+  </path>
+</vector>
